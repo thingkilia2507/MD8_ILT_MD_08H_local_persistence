@@ -1,4 +1,4 @@
-package com.thing.bangkit.md8_local_persistence
+package com.thing.bangkit.md8_local_persistence.data
 
 import android.content.Context
 import android.content.SharedPreferences

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import com.thing.bangkit.md8_local_persistence.data.SessionManager
 
 class MainActivity : AppCompatActivity() {
 
