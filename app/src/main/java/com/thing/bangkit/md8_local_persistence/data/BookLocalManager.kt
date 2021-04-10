@@ -34,7 +34,18 @@ class BookLocalManager constructor(
         writeableDb.insert(TABLE_NAME, null, values)
     }
 
-    fun getBooks() : List<BookContract.Book> {
+    fun deleteBook(author: String) {
+        val selection = BookContract.BookEntry.COLUMN_AUTHOR + " LIKE ?" //"?" means we have args and need to determine selectionArgs
+        val selectionArgs = arrayOf(author)
+
+        readableDb.delete(
+            TABLE_NAME,
+            selection,
+            selectionArgs
+        )
+    }
+
+    fun getBooks() : MutableList<BookContract.Book> {
         // define the temporary list of book variable
         val books = mutableListOf<BookContract.Book>()
 
